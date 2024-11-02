@@ -1,0 +1,192 @@
+
+.container {
+  text-align: center; 
+  margin: 0 auto; 
+  padding: 20px; 
+  background-color: #f8f9fa; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+.TabList {
+  display: flex; 
+  border-bottom: 2px solid #007bff; 
+  margin-bottom: 20px; 
+}
+
+.Tab {
+  flex: 1; 
+  padding: 10px; 
+  cursor: pointer; 
+  text-align: center; 
+  border: none; 
+  background-color: transparent; 
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold; 
+}
+
+.Tab:hover {
+  background-color: #e9ecef; /* Fondo al pasar el mouse */
+}
+
+.Tab:focus {
+  outline: none; /* Quita el borde de enfoque */
+  background-color: #d1ecf1; /* Fondo azul claro al enfocar */
+  color: #0c5460; /* Color del texto al enfocar */
+}
+
+.Tab.active {
+  background-color: #007bff; /* Fondo azul para la pestaña activa */
+  color: #fff; /* Texto blanco para la pestaña activa */
+}
+
+/* Estilo para el panel de la pestaña */
+.TabPanel {
+  padding: 20px; /* Espaciado interno */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 4px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para el contenedor de la imagen de perfil */
+.profile-picture-container {
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  margin: 20px 0; /* Espaciado arriba y abajo */
+}
+
+.profile-picture {
+  width: 150px; /* Ajusta el tamaño de la imagen */
+  height: 150px; /* Asegúrate de que sea cuadrada */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  border: 2px solid #007bff; /* Borde azul alrededor de la imagen */
+  object-fit: cover; /* Mantiene la relación de aspecto y recorta si es necesario */
+}
+
+/* Opcional: Aumenta el espaciado en los elementos del formulario */
+input[type="text"],
+input[type="time"],
+input[type="date"] {
+  margin: 10px 0; /* Añade espacio entre los campos */
+  width: 80%; /* Ajusta el ancho de los campos de texto */
+  max-width: 300px; /* Limita el ancho máximo */
+  padding: 10px; /* Añade espaciado interno */
+  border: 1px solid #ced4da; /* Borde gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  outline: none; /* Quita el borde de enfoque */
+  transition: border-color 0.2s; /* Transición suave */
+}
+
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="date"]:focus {
+  border-color: #007bff; /* Cambia el color del borde al enfocar */
+}
+
+/* Estilos para el botón */
+button {
+  margin-top: 20px; /* Añade espacio arriba del botón */
+}
+
+/* Estilos para los grupos de radio */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.2s, border-color 0.2s;
+  font-size: 0.9em; /* Tamaño de fuente más pequeño */
+}
+
+.radio-label:hover {
+  background-color: #e6e6e6; /* Fondo al pasar el mouse */
+}
+
+.radio-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-input:checked + .radio-label {
+  background-color: #def3f4; /* Fondo azul claro al seleccionar */
+  border-color: #7eedf5; /* Color del borde al seleccionar */
+}
+
+.radio-input:focus + .radio-label {
+  outline: 2px solid #7eedf5; /* Borde azul al enfocar */
+}
+
+.radio-inner-circle {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #888;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  transition: border-color 0.2s;
+  position: relative;
+}
+
+.radio-label:hover .radio-inner-circle {
+  border-color: #555; /* Cambia el color del borde al pasar el mouse */
+}
+
+.radio-input:checked + .radio-label .radio-inner-circle {
+  border-color: #7eedf5; /* Color del borde al seleccionar */
+}
+
+.radio-input:checked + .radio-label .radio-inner-circle::after {
+  content: '';
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: #7eedf5; /* Color de la bolita al seleccionar */
+  border-radius: 50%; /* Forma circular */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra la bolita */
+}
+
+/* Estilo para la entrada */
+.input {
+  max-width: 190px; /* Ancho máximo */
+  padding: 12px; /* Espaciado interno */
+  border: none; /* Sin bordes */
+  border-radius: 4px; /* Bordes redondeados */
+  box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.2); /* Sombra suave */
+  outline: none; /* Quita el borde de enfoque */
+  color: dimgray; /* Color del texto */
+}
+
+/* Estilo para entradas inválidas */
+.input:invalid {
+  animation: justshake 0.3s forwards; /* Animación para entradas inválidas */
+  color: red; /* Color rojo para texto inválido */
+}
+
+/* Animación de sacudida */
+@keyframes justshake {
+  25% {
+    transform: translateX(5px); /* Sacudida a la derecha */
+  }
+  50% {
+    transform: translateX(-5px); /* Sacudida a la izquierda */
+  }
+  75% {
+    transform: translateX(5px); /* Sacudida a la derecha */
+  }
+  100% {
+    transform: translateX(-5px); /* Sacudida a la izquierda */
+  }
+}
